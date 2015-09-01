@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="appCliente">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <script src="js/mainCtrl.js"></script>
+  </head>
+
+  <body ng-controller="mainCtrl">
+    
+    <!-- <ion-nav-view></ion-nav-view> -->
+    
+    <ion-pane>
+      
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Login</h1>
+      </ion-header-bar>
+
+      <ion-content has-header="true" padding="true">
+        <label class="item item-input">
+          <input type="text" placeholder="Email, CPF/CNPJ ou telefone" ng-model="dados.username">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="Senha" ng-model="dados.password">
+        </label>
+
+        <!-- <label class="item item-input item-stacked-label">
+          <input type="text" ng-if="showPasswordIsChecked" name="password" ng-model="dados.password" required>
+          <input type="password" ng-if="!showPasswordIsChecked" name="password" ng-model="dados.password" required>
+        </label>
+
+        <ion-checkbox ng-model="showPasswordIsChecked">Show password</ion-checkbox> -->
+
+        <br>
+
+        <a class="button" ng-click="login(dados)">Logar</a>
+
+        <p>{{dados}}</p>
+
+      </ion-content>
+    
+    </ion-pane>
+
+  </body>
+
+</html>
